@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Azure App Demo{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/data">Ver Datos Azure Demo</a>
+        <a href="/about">Acerca de</a>
+    </nav>
+    
+    <div class="container">
+        {% block content %}
+        {{ content|safe }}
+        {% endblock %}
+    </div>
+</body>
+</html>

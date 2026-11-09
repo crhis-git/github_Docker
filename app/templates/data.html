@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Datos Demo{% endblock %}
+{% block content %}
+    <h1>Listado de Nodos Azure (Demo)</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Hostname</th>
+            <th>Rol</th>
+            <th>Estado</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td><strong>{{ item.hostname }}</strong></td>
+            <td>{{ item.rol }}</td>
+            <td style="color: green;">{{ item.estado }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
